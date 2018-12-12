@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+.nyc_output
+coverage
+.npm
+.eslintcache
+.node_repl_history
+.env

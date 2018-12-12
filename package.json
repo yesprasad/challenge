@@ -1,0 +1,27 @@
+{
+  "name": "code-challenge-production-master",
+  "version": "1.0.0",
+  "description": "bloomon testing challenge",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "nyc mocha --recursive || true",
+    "valid": "node index.js < ./sample/input.txt",
+    "invalid": "node index.js < ./sample/invalid.txt",
+    "valid-bloomon": "npm-run-series lint test valid",
+    "invalid-bloomon": "npm-run-series lint test invalid",
+    "app" : "node index.js",
+    "factory": "npm-run-series lint test app"
+  },
+  "author": "Eshwar Yaddanapudi<y.eshwarprasad@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "5.10.0",
+    "mocha": "5.2.0",
+    "nyc": "13.1.0"
+  },
+  "dependencies": {
+    "npm-run-series": "1.0.1"
+  }
+}
